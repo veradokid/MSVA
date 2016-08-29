@@ -10,23 +10,29 @@ namespace Variables
     {
         static void Main(string[] args)
         {
-//single line comment
+            //ex 1
+            
+            //single line comment
 
-            int x;
-            int y;
+            //int x;
+            //int y;
 
-/*This way
-    * you may
-    * comment 
-    * a whole
-    * paragraph
-    */
+            /*
+             * several lines
+             * of
+             * comment
+             * */
 
-            x = 7;
-            y = x + 3;
+            //x = 7;
+            //y = x + 3;
 
-            Console.WriteLine(y);
-            Console.ReadLine();
+            //Console.WriteLine(y);
+            //Console.ReadLine();
+
+
+            //ex 2
+
+
         }
     }
 }
