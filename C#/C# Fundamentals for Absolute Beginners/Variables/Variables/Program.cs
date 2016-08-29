@@ -11,7 +11,7 @@ namespace Variables
         static void Main(string[] args)
         {
             //ex 1
-            
+
             //single line comment
 
             //int x;
@@ -31,7 +31,17 @@ namespace Variables
 
 
             //ex 2
+            Console.WriteLine("What is your name?");
+            Console.WriteLine("Type your first name: ");
+            string myFirstName;
+            myFirstName = Console.ReadLine();
 
+            string myLastName;
+            Console.WriteLine("Type your last name: ");
+            myLastName = Console.ReadLine();
+
+            Console.WriteLine("Hello, " + myFirstName + " " + myLastName);
+            Console.ReadLine();
 
         }
     }
