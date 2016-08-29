@@ -10,8 +10,17 @@ namespace Variables
     {
         static void Main(string[] args)
         {
+//single line comment
+
             int x;
             int y;
+
+/*This way
+    * you may
+    * comment 
+    * a whole
+    * paragraph
+    */
 
             x = 7;
             y = x + 3;
