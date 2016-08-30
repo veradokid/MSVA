@@ -10,6 +10,8 @@ namespace Decisions
     {
         static void Main(string[] args)
         {
+            /* ex 1
+             * 
             Console.WriteLine("Bob's Big Givaway");
             Console.Write("Choose a door: 1,2 or 3: ");
             string userValue = Console.ReadLine();
@@ -29,6 +31,24 @@ namespace Decisions
                 message += "You loose!";
             }
             Console.WriteLine(message);
+            Console.ReadLine();
+            */
+
+            //ex 2
+            Console.WriteLine("Bob's big giveaway");
+            Console.Write("Choose a door: 1,2 or 3: ");
+            string userValue = Console.ReadLine();
+
+            string message = (userValue == "1") ? "boat" : "strand of lint";
+
+            //Console.Write("You won a ");
+            //Console.Write(message);
+            //Console.Write(".");
+            //Console.ReadLine();
+
+            //shorter
+            //Console.WriteLine("You won a {0}.", message);
+            Console.WriteLine("You entered: {0}, therefor you won a {1}.", userValue, message);
             Console.ReadLine();
 
         }
