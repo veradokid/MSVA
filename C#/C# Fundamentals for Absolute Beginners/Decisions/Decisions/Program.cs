@@ -19,14 +19,19 @@ namespace Decisions
                 string message = "You won a new car!";
                 Console.WriteLine(message);
             }
-            if (userValue == "2")
+            else if (userValue == "2")
             {
                 string message = "You won a new boat!";
                 Console.WriteLine(message);
             }
-            if (userValue == "3")
+            else if (userValue == "3")
             {
                 string message = "You won a new cat!";
+                Console.WriteLine(message);
+            }
+            else
+            {
+                string message = "Sorry, we didn't understand.";
                 Console.WriteLine(message);
             }
 
