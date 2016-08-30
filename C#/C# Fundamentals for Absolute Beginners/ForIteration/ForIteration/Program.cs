@@ -12,9 +12,24 @@ namespace ForIteration
         {
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(i);
+                //Console.WriteLine(i);
+                if (i == 7)
+                {
+                    Console.WriteLine("found seven!");
+                    break;
+                }
             }
+
+            // code snippet ([bab] + [tab]
+            for (int myValue = 0; myValue < 123; myValue++)
+            {   
+
+            }
+
+
             Console.ReadLine();
+
+
         }
     }
 }
