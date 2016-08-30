@@ -10,6 +10,14 @@ namespace SimpleMethod
     {
         static void Main(string[] args)
         {
+            HelloWorld();       //invoke method by adding "()".
         }
+
+        private static void HelloWorld()
+        {
+            Console.WriteLine("Hello World");
+            Console.ReadLine();
+        }
+
     }
 }
