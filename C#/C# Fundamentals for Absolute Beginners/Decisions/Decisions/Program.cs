@@ -14,9 +14,19 @@ namespace Decisions
             Console.Write("Choose a door: 1,2 or 3: ");
             string userValue = Console.ReadLine();
 
-            if (userValue =="1")
+            if (userValue == "1")
             {
                 string message = "You won a new car!";
+                Console.WriteLine(message);
+            }
+            if (userValue == "2")
+            {
+                string message = "You won a new boat!";
+                Console.WriteLine(message);
+            }
+            if (userValue == "3")
+            {
+                string message = "You won a new cat!";
                 Console.WriteLine(message);
             }
 
