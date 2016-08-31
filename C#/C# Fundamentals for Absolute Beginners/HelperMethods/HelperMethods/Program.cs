@@ -55,8 +55,22 @@ namespace HelperMethods
 
             Console.ReadLine();
 
+        }//main
+
+        private static void ReverseString()
+        {
+            string message = "Hello World";
+            char[] messageArray = message.ToCharArray();
+            Array.Reverse(messageArray);
+
+            foreach (char item in messageArray)
+            {
+                Console.Write(item);
+            }
         }
 
 
-    }
+
+
+}//program
 }
