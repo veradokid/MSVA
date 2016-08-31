@@ -58,8 +58,15 @@ namespace HelperMethods
             //string reversedCity = ReverseString(city);
 
             DisplayResult(
-                ReverseString(firstName), 
-                ReverseString(lastName), 
+                ReverseString(firstName),
+                ReverseString(lastName),
+                ReverseString(city));
+
+            Console.WriteLine();
+
+            DisplayResult(
+                ReverseString(firstName) + " " +
+                ReverseString(lastName) + " " +
                 ReverseString(city));
 
             Console.ReadLine();
@@ -84,6 +91,13 @@ namespace HelperMethods
                 reversedLastName,
                 reversedCity));
         }
+
+        private static void DisplayResult(string message)
+        {
+            Console.Write("Result: ");
+            Console.Write(message);
+        }
+
 
         //foreach (char item in messageArray)
         //{
