@@ -20,9 +20,10 @@ namespace WhileIteration
         //developer methods here
         private static bool MainMenu()
         {
+            Console.Clear();
             Console.WriteLine("Choose an option:");
-            Console.WriteLine("1. Option 1");
-            Console.WriteLine("2. Option 2");
+            Console.WriteLine("1. Print numbers");
+            Console.WriteLine("2. Guessing game");
             Console.WriteLine("3. Exit");
             string result = Console.ReadLine();
             if (result == "1")
@@ -47,6 +48,7 @@ namespace WhileIteration
 
         private static void PrintNumbers()
         {
+            Console.Clear();
             Console.WriteLine("Print numbers");
             Console.Write("Type a number: ");
             int result = int.Parse(Console.ReadLine());
@@ -63,7 +65,29 @@ namespace WhileIteration
 
         private static void GuessingGame()
         {
+            Console.Clear();
             Console.WriteLine("Guessing game");
+
+            Random myRandom = new Random();
+            int randomNumber = myRandom.Next(1, 11);
+
+            int guesses = 0;
+            bool incorrect = true;
+
+            do
+            {
+                Console.WriteLine("Guess a number between 1 and 10");
+                string result = Console.ReadLine();
+                guesses++;
+
+                if (result == randomNumber.ToString())
+                    incorrect = false;
+                else
+                    Console.WriteLine("Wrong!");
+            } while (incorrect);
+
+            Console.WriteLine("It took you {0} guesses.", guesses);
+
             Console.ReadLine();
         }//GuessingGame
     }
