@@ -21,45 +21,49 @@ namespace HelperMethods
             Console.Write("In what city were you born?");
             string city = Console.ReadLine();
 
-            char[] firstNameArray = firstName.ToCharArray();
-            Array.Reverse(firstNameArray);
+            //char[] firstNameArray = firstName.ToCharArray();
+            //Array.Reverse(firstNameArray);
 
-            char[] lastNameArray = lastName.ToCharArray();
-            Array.Reverse(lastNameArray);
+            //char[] lastNameArray = lastName.ToCharArray();
+            //Array.Reverse(lastNameArray);
 
-            char[] cityArray = city.ToCharArray();
-            Array.Reverse(cityArray);
+            //char[] cityArray = city.ToCharArray();
+            //Array.Reverse(cityArray);
 
-            string result = "";
+            //string result = "";
 
-            foreach (char item in firstNameArray)
-            {
-                result += item;
-            }
+            //foreach (char item in firstNameArray)
+            //{
+            //    result += item;
+            //}
 
-            result += " ";
+            //result += " ";
 
-            foreach (char item in lastNameArray)
-            {
-                result += item;
-            }
+            //foreach (char item in lastNameArray)
+            //{
+            //    result += item;
+            //}
 
-            result += " ";
+            //result += " ";
 
-            foreach (char item in cityArray)
-            {
-                result += item;
-            }
+            //foreach (char item in cityArray)
+            //{
+            //    result += item;
+            //}
 
-            Console.WriteLine("Results: " + result);
+            //Console.WriteLine("Results: " + result);
+
+            Console.Write("Result: ");
+            ReverseString(firstName);
+            ReverseString(lastName);
+            ReverseString(city);
 
             Console.ReadLine();
 
         }//main
 
-        private static void ReverseString()
-        {
-            string message = "Hello World";
+        private static void ReverseString(string message)
+        {           
             char[] messageArray = message.ToCharArray();
             Array.Reverse(messageArray);
 
@@ -67,6 +71,7 @@ namespace HelperMethods
             {
                 Console.Write(item);
             }
+            Console.Write(" ");
         }
 
 
