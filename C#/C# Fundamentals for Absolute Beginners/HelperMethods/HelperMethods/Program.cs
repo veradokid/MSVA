@@ -53,15 +53,14 @@ namespace HelperMethods
 
             //Console.WriteLine("Results: " + result);
 
-            Console.Write("Result: ");
-            string reversedFirstName = ReverseString(firstName);
-            string reversedLastName = ReverseString(lastName);
-            string reversedCity = ReverseString(city);
+            //string reversedFirstName = ReverseString(firstName);
+            //string reversedLastName = ReverseString(lastName);
+            //string reversedCity = ReverseString(city);
 
-            Console.Write(String.Format("{0} {1} {2}", 
-                reversedFirstName,
-                reversedLastName,
-                reversedCity));
+            DisplayResult(
+                ReverseString(firstName), 
+                ReverseString(lastName), 
+                ReverseString(city));
 
             Console.ReadLine();
 
@@ -74,13 +73,25 @@ namespace HelperMethods
             return String.Concat(messageArray);
         }
 
-    //foreach (char item in messageArray)
-    //{
-    //    Console.Write(item);
-    //}
-    //Console.Write(" ");
+        private static void DisplayResult(
+            string reversedFirstName, 
+            string reversedLastName, 
+            string reversedCity)
+        {
+            Console.Write("Result: ");
+            Console.Write(String.Format("{0} {1} {2}",
+                reversedFirstName,
+                reversedLastName,
+                reversedCity));
+        }
+
+        //foreach (char item in messageArray)
+        //{
+        //    Console.Write(item);
+        //}
+        //Console.Write(" ");
 
 
 
-}//program
+    }//program
 }
