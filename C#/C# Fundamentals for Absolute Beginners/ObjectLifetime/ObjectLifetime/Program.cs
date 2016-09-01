@@ -10,6 +10,8 @@ namespace ObjectLifetime
     {
         static void Main(string[] args)
         {
+            Car.MyMethod();     //calling static method
+
             Car myCar = new Car();
 
             //myCar.Make = "Oldsmobile";
@@ -77,6 +79,11 @@ namespace ObjectLifetime
             Model = model;
             Year = year;
             Color = color;
+        }
+
+        public static void MyMethod()
+        {
+            Console.WriteLine("How you doin!");
         }
     }
 
