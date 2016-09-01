@@ -22,19 +22,18 @@ namespace SimpleClasses
                 myCar.Year, 
                 myCar.Color);
 
-            decimal value = DetermineMarketValue(myCar);
-            Console.WriteLine("Value of your car is : {0:C}", value);
+            Console.WriteLine("Value of your car is : {0:C}", myCar.DetermineMarketValue());
 
             Console.ReadLine();
 
         }//Main
 
-        //method in "Program" namespace
-        private static decimal DetermineMarketValue(Car car)
-        {
-                decimal carValue = 100.0M;
-                return carValue;
-        }
+        ////method in "Program" namespace
+        //private static decimal DetermineMarketValue(Car car)
+        //{
+        //        decimal carValue = 100.0M;
+        //        return carValue;
+        //}
 
     }//Program
 
@@ -46,6 +45,18 @@ namespace SimpleClasses
         public string Model { get; set; }
         public int Year { get; set; }
         public string Color { get; set; }
+
+        //method in "Car" namespace
+        public decimal DetermineMarketValue()
+        {
+            decimal carValue;
+            if (Year > 1990)
+                carValue = 10000;
+            else
+                carValue = 2000;
+            return carValue;
+        }
+
     }
 
 
