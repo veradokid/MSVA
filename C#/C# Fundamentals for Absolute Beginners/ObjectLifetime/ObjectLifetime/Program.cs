@@ -84,6 +84,7 @@ namespace ObjectLifetime
         public static void MyMethod()
         {
             Console.WriteLine("How you doin!");
+            // Console.WriteLine(Make);     //instance properties are not available from static method
         }
     }
 
