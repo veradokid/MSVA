@@ -23,7 +23,7 @@ namespace UnderstandingScope
 
                 if (i == 9)
                 {
-                    string l = i.ToString(i);
+                    string l = i.ToString();
                 }
                 //Console.WriteLine(l);   //not in scope
             }
@@ -32,13 +32,33 @@ namespace UnderstandingScope
             Console.WriteLine("Outside of the scope, j = " + j);
             Console.WriteLine("Outside of the for-loop, k = " + k);
             HelperMethod();
+
+            Car myCar = new Car();
+            myCar.DoSomething();    //the only member visible from the outside
+
             Console.ReadLine();
-        }
+        }//main
 
         static void HelperMethod()
         {
             Console.WriteLine("Value k from the HelperMethod():" + k);
         }
-        
+
+        class Car
+        {
+            public void DoSomething()
+            {
+                Console.WriteLine(HelperMethod());
+            }
+
+            private string HelperMethod()
+            {
+                return "Hello World";
+            }
+        }
+
+
+
+
     }
 }
