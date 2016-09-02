@@ -29,6 +29,10 @@ namespace AssembiesAndNamespaces
             Console.WriteLine(reply);
             //end snippet #2
 
+            //try writing to file
+            File.WriteAllText(@"C:\MSVA\MSDNText.txt", reply); 
+                                                               
+
             Console.WriteLine("Hello World");
             Console.ReadLine();
         }//Main
