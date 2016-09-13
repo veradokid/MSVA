@@ -15,10 +15,12 @@ namespace WorkingWithCollections
             Car car1 = new Car();
             car1.Make = "Oldsmobile";
             car1.Model = "Cutlas Supreme";
+            car1.VIN = "A1";
 
             Car car2 = new Car();
             car2.Make = "Geo";
             car2.Model = "Prism";
+            car2.VIN = "A2";
 
             Book b1 = new Book();
             b1.Author = "Robert Tabor";
@@ -42,6 +44,7 @@ namespace WorkingWithCollections
             }
             */
 
+            /*
             //List<T>   
             List<Car> myList = new List<Car>();
             myList.Add(car1);
@@ -52,7 +55,18 @@ namespace WorkingWithCollections
             {
                 Console.WriteLine(car.Model);
             }
+            */
 
+            
+            //Dictionary
+            //Two components. The keyword and the description; the Key and the Value, with corresponding types: TKey, TValue
+
+            Dictionary<string, Car> myDictionary = new Dictionary<string, Car>();
+            myDictionary.Add(car1.VIN, car1);
+            myDictionary.Add(car2.VIN, car2);
+
+            Console.WriteLine(myDictionary["A2"].Make);     //Lookup and use the value directly
+            
 
 
             Console.ReadLine();
@@ -64,6 +78,7 @@ namespace WorkingWithCollections
     {
         public string Make { get; set; }
         public string Model { get; set; }
+        public string VIN { get; set; }
     }
 
     class Book
