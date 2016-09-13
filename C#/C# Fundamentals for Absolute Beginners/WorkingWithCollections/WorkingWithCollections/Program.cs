@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace WorkingWithCollections
             //Instatiate and populate with values
             Car car1 = new Car();
             car1.Make = "Oldsmobile";
-            car1.Model "Cutlas Supreme";
+            car1.Model = "Cutlas Supreme";
 
             Car car2 = new Car();
             car2.Make = "Geo";
@@ -23,6 +24,26 @@ namespace WorkingWithCollections
             b1.Author = "Robert Tabor";
             b1.Title = "Microsoft .NET XML Web Services";
             b1.ISBN = "0-000-00000-0";
+
+            /*
+            // Arraylists are "old style"
+            // ArrayLists are dynamically sized
+            // Cool features
+
+            ArrayList myArrayList = new ArrayList();
+            myArrayList.Add(car1);
+            myArrayList.Add(car2);
+            myArrayList.Add(b1);
+            myArrayList.Remove(b1);
+
+            foreach (Car car in myArrayList)
+            {
+                Console.WriteLine(car.Make);
+            }
+            */
+
+            Console.ReadLine();
+
         }
     }
 
