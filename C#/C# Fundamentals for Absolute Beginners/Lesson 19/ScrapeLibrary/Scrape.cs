@@ -27,7 +27,9 @@ namespace ScrapeLibrary
         //helpermethod to eliminate duplicate code
         {
             WebClient client = new WebClient();
-            return client.DownloadString(url);
+            string content = client.DownloadString(url);
+            content += "\n Thats all Folks!";
+            return content;
         }
     }
 
