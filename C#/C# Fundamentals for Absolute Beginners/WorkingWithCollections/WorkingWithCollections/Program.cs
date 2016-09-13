@@ -42,6 +42,19 @@ namespace WorkingWithCollections
             }
             */
 
+            //List<T>   
+            List<Car> myList = new List<Car>();
+            myList.Add(car1);
+            myList.Add(car2);
+            //myList.Add(b1);   Will not even compile
+
+            foreach (Car car in myList)
+            {
+                Console.WriteLine(car.Model);
+            }
+
+
+
             Console.ReadLine();
 
         }
