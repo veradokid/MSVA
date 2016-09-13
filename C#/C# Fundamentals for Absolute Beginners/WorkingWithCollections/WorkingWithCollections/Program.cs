@@ -11,6 +11,8 @@ namespace WorkingWithCollections
     {
         static void Main(string[] args)
         {
+
+            /*
             //Instatiate and populate with values
             Car car1 = new Car();
             car1.Make = "Oldsmobile";
@@ -26,6 +28,8 @@ namespace WorkingWithCollections
             b1.Author = "Robert Tabor";
             b1.Title = "Microsoft .NET XML Web Services";
             b1.ISBN = "0-000-00000-0";
+            */
+
 
             /*
             // Arraylists are "old style"
@@ -57,7 +61,7 @@ namespace WorkingWithCollections
             }
             */
 
-            
+            /*
             //Dictionary
             //Two components. The keyword and the description; the Key and the Value, with corresponding types: TKey, TValue
 
@@ -66,8 +70,31 @@ namespace WorkingWithCollections
             myDictionary.Add(car2.VIN, car2);
 
             Console.WriteLine(myDictionary["A2"].Make);     //Lookup and use the value directly
-            
+            */
 
+
+            // Example of verry effective and dense syntax:
+
+            // Array initializer syntax
+            // init an array with values by assigning a collection to it
+            string[] names = { "Bob", "Steve", "Brian", "Chuck" };
+
+            // Object intializer syntax
+            // No need for Contstructor
+            // init an instance with values by assigning a collection to it
+            Car car1 = new Car() { Make = "BMW", Model = "750li", VIN = "C3" };
+            Car car2 = new Car() { Make = "Toyota", Model = "4Runner", VIN = "B4" };
+
+            // Collection initializer
+            //1.Creating new list
+            //2.insert new elements in list by assigning a collection to it.
+            //(new elements are returned by the Car constructor)
+            //(the new car instances are already initialized by assigning a collection to it)
+            List<Car> myList = new List<Car>()
+            {
+                new Car { Make = "Oldsmobile", Model = "Cutlas Supreme", VIN = "E5" },
+                new Car { Make = "Nissan", Model = "Altina", VIN = "F6" }
+            };
 
             Console.ReadLine();
 
