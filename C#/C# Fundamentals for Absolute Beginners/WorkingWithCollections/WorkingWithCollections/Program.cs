@@ -12,4 +12,14 @@ namespace WorkingWithCollections
         {
         }
     }
+
+    class Car
+    {
+
+    }
+
+    class Book
+    {
+
+    }
 }
