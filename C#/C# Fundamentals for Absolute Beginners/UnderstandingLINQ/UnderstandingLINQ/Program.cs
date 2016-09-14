@@ -18,8 +18,20 @@ namespace UnderstandingLINQ
                 new Car() { VIN="E5", Make="BMW", Model="55i", StickerPrice=57000, Year=2010}
             };
 
+            // LINQ query syntax
+            var bmws = from car in myCars
+                       where car.Make == "BMW"
+                       select car;
+
+            // LINQ method syntax
+
+            foreach (var car in bmws)
+            {
+                Console.WriteLine("{0} {1}", car.Model, car.VIN);
+            }
 
 
+            Console.ReadLine();
 
         }
     }
