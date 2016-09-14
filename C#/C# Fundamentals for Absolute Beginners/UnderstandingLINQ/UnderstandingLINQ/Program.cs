@@ -40,7 +40,7 @@ namespace UnderstandingLINQ
             //var orderedCars = myCars.OrderByDescending(c => c.Year);
 
             // ex.3 Find first item
-            var firstCar = myCars.First(c => c.Make == "BMW");
+            var firstCar = myCars.OrderByDescending(c => c.Year).First(c => c.Make == "BMW");
             Console.WriteLine("{0} {1} {2}", firstCar.Model, firstCar.VIN, firstCar.Year);
 
 
