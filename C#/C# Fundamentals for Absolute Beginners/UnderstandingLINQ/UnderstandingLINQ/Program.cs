@@ -19,23 +19,37 @@ namespace UnderstandingLINQ
             };
 
             // LINQ query syntax
-            /*
+            /* ex.1 Filter
             var bmws = from car in myCars
                        where car.Make == "BMW"
                        && car.Year == 2010
                        select car;
             */
 
-            
+            /* ex.2 Order
+            var orderedCars = from car in myCars
+                              orderby car.Year descending
+                              select car;
+            */
 
             // LINQ method syntax            
+            // ex.1 Filter
             //var bmws = myCars.Where(p => p.Make == "BMW" && p.Year == 2010);
 
-            foreach (var car in bmws)
-            {
-                Console.WriteLine("{0} {1}", car.Model, car.VIN);
-            }
+            // ex.2 Order
+            //var orderedCars = myCars.OrderByDescending(c => c.Year);
 
+            // ex.3 Find first item
+            var firstCar = myCars.First(c => c.Make == "BMW");
+            Console.WriteLine("{0} {1} {2}", firstCar.Model, firstCar.VIN, firstCar.Year);
+
+
+            /*
+            foreach (var car in orderedCars)
+            {
+                Console.WriteLine("{0} {1} {2}" ,car.Model, car.VIN, car.Year);
+            }
+            */
 
             Console.ReadLine();
 
