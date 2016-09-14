@@ -19,11 +19,17 @@ namespace UnderstandingLINQ
             };
 
             // LINQ query syntax
+            /*
             var bmws = from car in myCars
                        where car.Make == "BMW"
+                       && car.Year == 2010
                        select car;
+            */
 
-            // LINQ method syntax
+            
+
+            // LINQ method syntax            
+            //var bmws = myCars.Where(p => p.Make == "BMW" && p.Year == 2010);
 
             foreach (var car in bmws)
             {
