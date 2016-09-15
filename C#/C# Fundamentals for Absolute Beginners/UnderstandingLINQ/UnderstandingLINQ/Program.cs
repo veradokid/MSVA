@@ -44,7 +44,10 @@ namespace UnderstandingLINQ
             //Console.WriteLine("{0} {1} {2}", firstCar.Model, firstCar.VIN, firstCar.Year);
 
             // ex.4 
-            Console.WriteLine(myCars.TrueForAll(p=>p.Year > 2010));
+            //Console.WriteLine(myCars.TrueForAll(p=>p.Year > 2010));
+
+            // ex.5
+            myCars.ForEach(p => Console.WriteLine("{0} {1:C}", p.VIN, p.StickerPrice));
 
 
             /*
