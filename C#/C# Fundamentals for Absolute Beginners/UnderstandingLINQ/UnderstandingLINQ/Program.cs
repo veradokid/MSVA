@@ -50,8 +50,11 @@ namespace UnderstandingLINQ
             //myCars.ForEach(p => Console.WriteLine("{0} {1:C}", p.VIN, p.StickerPrice));
 
             // ex.6
-            myCars.ForEach(p => p.StickerPrice -= 3000);
-            myCars.ForEach(p => Console.WriteLine("{0} {1:C}", p.VIN, p.StickerPrice));
+            //myCars.ForEach(p => p.StickerPrice -= 3000);
+            //myCars.ForEach(p => Console.WriteLine("{0} {1:C}", p.VIN, p.StickerPrice));
+
+            // ex.7
+            Console.WriteLine(myCars.Exists(p => p.Model == "745li"));
 
             /*
             foreach (var car in orderedCars)
