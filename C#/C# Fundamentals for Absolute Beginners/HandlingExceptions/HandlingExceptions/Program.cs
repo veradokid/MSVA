@@ -11,10 +11,18 @@ namespace HandlingExceptions
     {
         static void Main(string[] args)
         {
-            string content = File.ReadAllText(@"c:\Lesson22\Exampl.txt");
-            Console.WriteLine(content);
+            try
+            {
+                string content = File.ReadAllText(@"c:\Lesson22\Exampl.txt");
+                Console.WriteLine(content);
+            }
+            catch (Exception ex)
+            {
+                //throw;
+                Console.WriteLine("There was a problem!");
+                Console.WriteLine(ex.Message);
+            }
             Console.ReadLine();
-
         }
     }
 }
