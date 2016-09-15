@@ -57,7 +57,7 @@ namespace UnderstandingLINQ
             // Console.WriteLine(myCars.Exists(p => p.Model == "745li"));
 
             // ex.8
-            Console.WriteLine(myCars.Sum(p => p.StickerPrice));
+            //Console.WriteLine("{0:C}", myCars.Sum(p => p.StickerPrice));
 
             /*
             foreach (var car in orderedCars)
@@ -65,6 +65,27 @@ namespace UnderstandingLINQ
                 Console.WriteLine("{0} {1} {2}" ,car.Model, car.VIN, car.Year);
             }
             */
+
+
+            //GetType
+            Console.WriteLine(myCars.GetType());
+
+            var orderedCars = myCars.OrderByDescending(c => c.Year);
+            Console.WriteLine(orderedCars.GetType());
+
+            var bmws = myCars.Where(p => p.Make == "BMW" && p.Year == 2010);
+            Console.WriteLine(bmws.GetType());
+
+
+            // Define types at runtime
+            // Anonymous types
+            // select new {} : will return a collection of type: anonymous type. (see the GetType command)
+            var newCars = from car in myCars
+                       where car.Make == "BMW"
+                       && car.Year == 2010
+                       select new { car.Make, car.Model };
+            Console.WriteLine(newCars.GetType());
+
 
             Console.ReadLine();
 
